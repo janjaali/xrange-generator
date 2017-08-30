@@ -1,6 +1,6 @@
 {
   "name": "xrange-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "xrange-generator for JS",
   "main": "index.js",
   "repository": "https://github.com/janjaali/xrange-generator.git",
