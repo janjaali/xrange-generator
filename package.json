@@ -1,0 +1,9 @@
+{
+  "name": "xrange-generator",
+  "version": "1.0.0",
+  "description": "xrange-generator for JS",
+  "main": "index.js",
+  "repository": "https://github.com/janjaali/xrange-generator.git",
+  "author": "Siyavash Habashi <ghashange@live.com>",
+  "license": "MIT"
+}
