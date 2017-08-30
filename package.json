@@ -5,5 +5,21 @@
   "main": "index.js",
   "repository": "https://github.com/janjaali/xrange-generator.git",
   "author": "Siyavash Habashi <ghashange@live.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "lint": "./node_modules/.bin/eslint ./src ./test"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0",
+    "jest": "^20.0.4",
+    "webpack": "^3.5.5",
+    "webpack-merge": "^4.1.0"
+  }
 }
