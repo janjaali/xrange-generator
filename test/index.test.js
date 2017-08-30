@@ -54,4 +54,38 @@ describe('xrange', () => {
     expect(range.next().value).toBe(45);
     expect(range.next().value).toBe(50);
   });
+
+  it('generates doc-examples', () => {
+    let range = xrange(); // -> [0, 1, 2, 3, 4, 5, ...]
+    expect(range.next().value).toBe(0);
+    expect(range.next().value).toBe(1);
+    expect(range.next().value).toBe(2);
+    expect(range.next().value).toBe(3);
+    expect(range.next().done).toBe(false);
+    
+    range = xrange(40); // -> [40, 41, 42, ...]
+    expect(range.next().value).toBe(40);
+    expect(range.next().value).toBe(41);
+    expect(range.next().value).toBe(42);
+    expect(range.next().done).toBe(false);
+    
+    range = xrange(40, undefined, 5); // -> [40, 45, 50, ...] 
+    expect(range.next().value).toBe(40);
+    expect(range.next().value).toBe(45);
+    expect(range.next().value).toBe(50);
+    expect(range.next().done).toBe(false);
+
+    range = xrange(5, 12, 3); // -> [5, 8, 11] 
+    expect(range.next().value).toBe(5);
+    expect(range.next().value).toBe(8);
+    expect(range.next().value).toBe(11);
+    expect(range.next().done).toBe(true);
+    
+    range = xrange(100, 90, 3); // -> [100, 97, 94, 91] 
+    expect(range.next().value).toBe(100);
+    expect(range.next().value).toBe(97);
+    expect(range.next().value).toBe(94);
+    expect(range.next().value).toBe(91);
+    expect(range.next().done).toBe(true);
+  })
 });

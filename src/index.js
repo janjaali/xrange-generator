@@ -4,12 +4,12 @@ function* xrange(from, to, by) {
   const step = by || 1;
 
   if (end && end < start) {
-    while (start !== end - 1) {
+    while (end && start >= end) {
       yield start;
       start -= step;
     }
   } else {
-    while (start !== end + 1) {
+    while (!end || start <= end) {
       yield start;
       start += step;
     }
