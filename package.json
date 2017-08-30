@@ -8,8 +8,12 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "lint": "./node_modules/.bin/eslint ./src ./test"
+    "lint": "./node_modules/.bin/eslint ./src ./test",
+    "build": "webpack --config webpack.prod.js"
   },
+  "files": [
+    "build"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
