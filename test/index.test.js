@@ -47,4 +47,11 @@ describe('xrange', () => {
     expect(range.next().value).toBe(5);
     expect(range.next().value).toBe(7);
   });
+
+  it('generates numbers and jumps the steps also if end parameter is not defined', () => {
+    const range = xrange(40, undefined, 5);
+    expect(range.next().value).toBe(40);
+    expect(range.next().value).toBe(45);
+    expect(range.next().value).toBe(50);
+  });
 });
