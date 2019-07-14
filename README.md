@@ -13,7 +13,7 @@ yarn add xrange-generator
 Start xRanging and take care of the infinity produced by the generators if you provide no end-parameter.
 
 ```javascript
-import xrange from ('xrange-generator');
+import xrange from 'xrange-generator';
 
 xrange(); // -> [0, 1, 2, 3, 4, 5, ...]
 xrange(40); // -> [40, 41, 42, ...]
